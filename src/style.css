@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 90vh;
 }
 
 .card {
@@ -17,8 +18,11 @@ body {
   width: 250px;
   padding: 20px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   position: relative;
+  font-size: 100px;
+  transition: all 1s;
+  box-shadow: 10px 20px 30px 10px rgb(32, 32, 32);
 }
 
 .card::before {
@@ -34,10 +38,6 @@ body {
   right: 20px;
   font-size: 80px;
   transform: rotate(180deg);
-}
-
-.number-position {
-  font-size: 100px;
 }
 
 .card.trebol::before,
@@ -63,4 +63,13 @@ body {
 .card.diamond,
 .card.heart {
   color: red;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card::before,
+.card::after {
+  font-size: 110px;
 }

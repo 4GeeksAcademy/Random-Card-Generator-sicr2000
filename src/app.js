@@ -24,13 +24,13 @@ window.onload = () => {
     "K"
   ];
 
-  const indexRandomSymbol = Math.floor(Math.random() * symbols.lenght);
+  const indexRandomSymbol = Math.floor(Math.random() * symbols.length);
 
-  const indexRandomNumber = Math.floor(Math.random() * numbers.lenght);
+  const indexRandomNumber = Math.floor(Math.random() * numbers.length);
 
   console.log(symbols[indexRandomSymbol]);
   console.log(numbers[indexRandomNumber]);
 
-  // document.querySelector(".icon").innerHTML = randomSymbolFunction();
-  // document.querySelector(".number").innerHTML = randomNumberFunction();
+  document.querySelector(".card").classList.add(symbols[indexRandomSymbol]);
+  document.querySelector(".card").innerHTML = numbers[indexRandomNumber];
 };
