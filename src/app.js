@@ -7,24 +7,30 @@ import "./assets/img/4geeks.ico";
 
 window.onload = () => {
   //write your code here
-  const symbols = ["♦", "♥", "♠", "♣"];
-  const numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  const symbols = ["diamond", "heart", "pica", "trebol"];
+  const numbers = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K"
+  ];
 
-  function randomSymbolFunction() {
-    const randomSymbol = symbols[Math.floor(Math.random() * symbols.lenght)];
+  const indexRandomSymbol = Math.floor(Math.random() * symbols.lenght);
 
-    return symbols[randomSymbol];
-  }
+  const indexRandomNumber = Math.floor(Math.random() * numbers.lenght);
 
-  function randomNumberFunction() {
-    const randomNumber = numbers[Math.floor(Math.random() * numbers.lenght)];
+  console.log(symbols[indexRandomSymbol]);
+  console.log(numbers[indexRandomNumber]);
 
-    return numbers[randomNumber];
-  }
-
-  console.log(randomNumberFunction());
-  console.log(randomSymbolFunction());
-
-  document.querySelector(".icon").innerHTML = randomSymbolFunction();
-  document.querySelector(".number").innerHTML = randomNumberFunction();
+  // document.querySelector(".icon").innerHTML = randomSymbolFunction();
+  // document.querySelector(".number").innerHTML = randomNumberFunction();
 };
